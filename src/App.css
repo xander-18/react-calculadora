@@ -192,3 +192,28 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
+.calculator-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.keypad-row {
+  display: contents; /* para que los botones se integren al grid */
+}
+
+.calculator-keypad button {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.calculator-keypad button:hover {
+  background-color: #ddd;
+}
