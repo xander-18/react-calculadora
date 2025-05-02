@@ -1,5 +1,24 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
+
+const DarkModeButton = () => {
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const calculator = document.querySelector('.calculator-wrapper');
+    if (calculator) {
+      calculator.classList.toggle('dark-mode', dark);
+    }
+
+    document.body.style.backgroundColor = dark ? '#ffffff' : '#121212';
+  }, [dark]);
+
+  return (
+    <button onClick={() => setDark(!dark)}>
+      {dark ? '🌙' : '🌓'}
+    </button>
+  );
+};
 
 function App() {
   const [displayValue, setDisplayValue] = useState<string>('0');
@@ -105,9 +124,7 @@ function App() {
       <div className="calculator-wrapper">
         <div className="calculator-header">
           <h2>Calculadora - React</h2>
-          {/* <div className="theme-toggle">
-            <div className="toggle-circle"></div>
-          </div> */}
+          <DarkModeButton />
         </div>
 
         <div className="calculator-display">
