@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #424242;
+  background-color: #ffffff;
   justify-content: center;
 }
 
@@ -244,16 +244,17 @@ body {
 }
 
 
-.clear-button {
-  background-color: #ff4d4f;
-  color: rgb(255, 0, 0);
-  font-weight: bold;
-}
-
+.clear-button,
 .igual-button {
-  background-color: #1890ff;
-  color: rgb(255, 0, 0);
-  font-weight: bold;
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #000000; /* mismo fondo base que los demás */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+  width: 100%;
 }
 
 .history-modal {
