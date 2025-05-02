@@ -141,6 +141,7 @@ function App() {
               <div className="panel-item" onClick={() => handleOperationClick('-')}><span>-</span></div>
               <div className="panel-item" onClick={() => handleOperationClick('x')}><span>x</span></div>
               <div className="panel-item" onClick={() => handleOperationClick('/')}><span>/</span></div>
+              <div className="panel-item" onClick={() => handleOperationClick('.')}><span>.</span></div>
             </div>
           </div>
 
